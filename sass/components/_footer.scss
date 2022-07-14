@@ -3,52 +3,56 @@ footer {
 
     padding-top: var(--typical-padding-midi);
     padding-bottom: var(--typical-padding-midi);
-    .logo-blue {
-        margin-right: 0;
-    }
+
     .container {
         display: flex;
         align-items: baseline;
     }
+
+    .logo-blue {
+        margin-right: 0;
+    }
 }
 
-.logo-white {
+.contacts__logo-white {
     color: var(--hero-text-color);
     margin-right: 156px;
 }
  
 .location {
     font-style: normal;
+
     margin-top: 20px;
 }
 
-.location-text {
+.location__text {
     color: var(--hero-text-color);
+
     margin-bottom: 9px;
 }
 
-.location-list {
+.location__link {
     transition: color 250ms var(--time-variable);
+
     color: rgba(255, 255, 255, 0.6);
-    @include font(null, null, 1.71, 0.03em);
-    // line-height: 1.71;
-    // letter-spacing: 0.03em;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
     &:hover,
     &:focus {
-        color: var(--accent-color);
+    color: var(--accent-color);
     }
 }
 
-.location-list-general:not(:last-child) {
+.location__item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.join-text {
+.join__text {
     display: block;
-    @include font(700, 10px, 1.14, null);
-    // font-weight: 700;
-    // font-style: 14px;
-    // line-height: 1.14;
+    font-weight: 700;
+    font-style: 14px;
+    line-height: 1.14;
     text-transform: uppercase;
     color: var(--hero-text-color);
     margin-bottom: 20px;  
@@ -62,7 +66,7 @@ footer {
     display: flex;
 }
 
-.subscription-input {
+.subscription__input {
     display: flex;
     padding: 15px 16px;
     width: 358px;
@@ -75,29 +79,31 @@ footer {
     color: var(--hero-text-color);
     transition: border 250ms var(--time-variable),
     box-shadow 250ms var(--time-variable);
+
     &:focus {
         border: 1px Solid var(--accent-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
+
     &::placeholder {
         font-family: Roboto;
-        @include font(400, 16px, 1.25, 0.03em);
-        // font-weight: 400;
-        // font-size: 16px;
-        // line-height: 1.25;
-        // letter-spacing: 0.03;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03;
         cursor: pointer;
     }
 }
 
-.subscription-btn {
+.subscription__btn {
     display: flex;
     cursor: pointer;
-    padding: 10px 29px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-left: 12px;
 }
 
-.button-icon-subscribe {
+.subscription__icon {
     align-items: center;
     margin-left: 10px;
 }

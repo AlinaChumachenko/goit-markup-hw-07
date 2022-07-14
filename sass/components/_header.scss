@@ -1,37 +1,27 @@
 header { 
     background-color: var(--hero-text-color);
     border: 1px solid #ECECEC;
-    .container { 
-        @include align-list;   
+
+    .container {  
+        @include align-list;
         // display: flex;
         // align-items: center;    
-    }
+    }    
 }
         
-.logo-blue {
-    @include align-list;  
-    // display: flex;
-    // align-items: center;
-        
-    color: var(--accent-color);
-    font-family: Raleway, Tahoma, sans-serif;
-    @include font(700, 26px, 1.19, 0.03em);
-    // font-weight: 700;
-    // font-size: 26px;
-    // line-height: 1.19;
-    // letter-spacing: 0.03em;
-    margin-right: 93px;
+ul {
+    list-style: none;
 }
 
-.logo-black {
+.navigation__logo-black {
     color: #000000;
 } 
 
-.studio-blue {
+.menu__studio-blue {
     color: var(--accent-color);
 }
 
-.portfolio-blue {
+.menu__portfolio-blue {
     color: var(--accent-color);
 }
 
@@ -39,18 +29,18 @@ header {
     display: flex;    
 }
 
-.site-navigation-list {
-    @include align-list;  
+.menu {
+    @include align-list;
     // display: flex;
     // align-items: center;
 }
 
-.header-item-site:not(:last-child) {
-    margin-right: 50px;
-}
-
-.header-item-site {
+.menu__item {
     position: relative;
+    
+    &:not(:last-child) {
+        margin-right: 50px;
+    }   
 }
 
 .current::after {
@@ -64,7 +54,7 @@ header {
     background-color: var(--accent-color);
 }
 
-.site-navigation {
+.menu__link {
     transition: color 250ms var(--time-variable);
 
     display:block;
@@ -75,24 +65,26 @@ header {
     // font-size: 14px;
     // line-height: 1.14;
     // letter-spacing: 0.02em;
+
     padding-top: 32px;
     padding-bottom: 32px;
-    &:hover,
-    &:focus {
+
+        &:hover,
+        &:focus {
         color: var(--accent-color);
     }
 }
 
-.auth-navigation-list {
+.auth {
     display: flex;
     margin-left: auto;   
 }
 
-.header-item-auth:not(:first-child) {
+.auth__item:not(:first-child) {
     margin-left: 50px;
 }
 
-.auth-navigation {
+.auth__link {
     transition: color 250ms var(--time-variable);
 
     color: var(--title-text-color);
@@ -101,19 +93,19 @@ header {
     // font-size: 14px;
     // line-height: 1.14;
     // letter-spacing: 0.02em;
-    @include align-list;  
+    @include align-list;
     // display: flex;
     // align-items: center;
     justify-content: center;
-    
     fill: #757575;
+
     &:hover,
     &:focus {
-        color: var(--accent-color);
-    }
+    color: var(--accent-color);   
+}
 }
 
-.auth-navigation-icon {
+.auth__icon {
     fill: currentColor;
     margin-right: 10px;
 }
