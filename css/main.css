@@ -69,6 +69,82 @@ img {
   margin-right: 93px;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  position: relative;
+}
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu__link--current::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+}
+
+.menu__link {
+  transition: color 250ms var(--time-variable);
+  display: block;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.menu__link:hover, .menu__link:focus {
+  color: var(--accent-color);
+}
+
+.menu__studio-blue {
+  color: var(--accent-color);
+}
+
+.menu__portfolio-blue {
+  color: var(--accent-color);
+}
+
+.auth {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.auth__link {
+  transition: color 250ms var(--time-variable);
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #757575;
+}
+.auth__link:hover, .auth__link:focus {
+  color: var(--accent-color);
+}
+
+.auth__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 .container-title {
   color: var(--primary-text-color);
   font-weight: 700;
@@ -164,84 +240,8 @@ ul {
   color: #000000;
 }
 
-.menu__studio-blue {
-  color: var(--accent-color);
-}
-
-.menu__portfolio-blue {
-  color: var(--accent-color);
-}
-
 .navigation {
   display: flex;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-}
-
-.menu__item {
-  position: relative;
-}
-.menu__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.current::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background-color: var(--accent-color);
-}
-
-.menu__link {
-  transition: color 250ms var(--time-variable);
-  display: block;
-  color: var(--primary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.menu__link:hover, .menu__link:focus {
-  color: var(--accent-color);
-}
-
-.auth {
-  display: flex;
-  margin-left: auto;
-}
-
-.auth__item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.auth__link {
-  transition: color 250ms var(--time-variable);
-  color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: #757575;
-}
-.auth__link:hover, .auth__link:focus {
-  color: var(--accent-color);
-}
-
-.auth__icon {
-  fill: currentColor;
-  margin-right: 10px;
 }
 
 .hero {
@@ -378,15 +378,12 @@ ul {
   color: var(--hero-text-color);
 }
 
-.block-our-team {
-  background-color: #F5F4FA;
+.card {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.team-members {
-  display: flex;
-  margin-left: -30px;
-}
-.team-members .card__name {
+.card__name {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -395,12 +392,22 @@ ul {
   text-align: center;
   margin-bottom: var(--typical-margin-midi);
 }
-.team-members .card__text {
+
+.card__text {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 16px;
+}
+
+.block-our-team {
+  background-color: #F5F4FA;
+}
+
+.team-members {
+  display: flex;
+  margin-left: -30px;
 }
 
 .team-members__item {
@@ -409,11 +416,6 @@ ul {
   background: var(--hero-text-color);
   flex-basis: calc(25% - 30px);
   margin-left: 30px;
-}
-
-.card {
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .regular-customers {
@@ -460,6 +462,10 @@ footer .logo-blue {
   margin-right: 156px;
 }
 
+.options {
+  margin-left: 93px;
+}
+
 .location {
   font-style: normal;
   margin-top: 20px;
@@ -494,8 +500,9 @@ footer .logo-blue {
   margin-bottom: 20px;
 }
 
-.options {
-  margin-left: 93px;
+.join-color {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--hero-text-color);
 }
 
 .subscription {
@@ -539,11 +546,6 @@ footer .logo-blue {
 .subscription__icon {
   align-items: center;
   margin-left: 10px;
-}
-
-.join-color {
-  background-color: rgba(255, 255, 255, 0.1);
-  fill: var(--hero-text-color);
 }
 
 .bacdrop {
@@ -727,7 +729,7 @@ footer .logo-blue {
   margin-bottom: 50px;
 }
 
-.menu-butto__btn {
+.menu-button__btn {
   transition: color 250ms var(--time-variable), background-color 250ms var(--time-variable), box-shadow 250ms var(--time-variable);
   border-radius: 4px;
   border: 0px solid transparent;
@@ -742,10 +744,15 @@ footer .logo-blue {
   text-align: center;
   padding: 6px 22px;
 }
-.menu-butto__btn:hover, .menu-butto__btn:focus {
+.menu-button__btn:hover, .menu-button__btn:focus {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button__btn--active {
+  color: var(--hero-text-color);
+  background-color: var(--accent-color);
 }
 
 .menu-button__item:not(:last-child) {

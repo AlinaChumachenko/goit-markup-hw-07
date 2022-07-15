@@ -4,7 +4,7 @@
     margin-bottom: 50px;
 }
 
-.menu-butto__btn {
+.menu-button__btn {
     transition: color 250ms var(--time-variable), 
     background-color 250ms var(--time-variable),
     box-shadow 250ms var(--time-variable);
@@ -31,6 +31,11 @@
     0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
 }
+}
+
+.menu-button__btn--active{
+    color: var(--hero-text-color);
+    background-color: var(--accent-color);
 }
 
 .menu-button__item:not(:last-child) {
